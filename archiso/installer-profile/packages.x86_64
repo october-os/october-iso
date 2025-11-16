@@ -128,13 +128,4 @@ xl2tpd
 zsh
 
 # added
-kitty
-plasma-desktop
-
-
-# calamares dependencies
-yaml-cpp
-libpwquality
-qt6-declarative
-qt6-svg
-kpmcore
+git

@@ -1,2 +1,1 @@
-sudo chmod +x /usr/bin/calamares
-exec startplasma-wayland
+git clone https://github.com/arch-couple/arch-couple-installer.git
