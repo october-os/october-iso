@@ -128,5 +128,13 @@ xl2tpd
 zsh
 
 # added
-hyprland
 kitty
+plasma-desktop
+
+
+# calamares dependencies
+yaml-cpp
+libpwquality
+qt6-declarative
+qt6-svg
+kpmcore
