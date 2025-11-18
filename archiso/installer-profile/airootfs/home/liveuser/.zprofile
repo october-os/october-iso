@@ -1,1 +1,0 @@
-git clone https://github.com/arch-couple/arch-couple-installer.git
