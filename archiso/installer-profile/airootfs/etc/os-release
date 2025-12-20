@@ -1,5 +1,5 @@
-NAME="arch-couple"
-PRETTY_NAME="Arch Couple"
-ID=arch-couple
+NAME="october-linux"
+PRETTY_NAME="October Linux"
+ID=october-linux
 BUILD_ID=rolling
 ANSI_COLOR="38;2;23;147;209"
