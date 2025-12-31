@@ -19,6 +19,7 @@ This file contains a list of all the base packages that will be present in all i
 - vi
 - networkmanager
 - os-prober
+- fuse3 // needed for os-prober to work properly, but not in dependencies (what??)
 - pacman-contrib
 - sudo-rs
 - wget
