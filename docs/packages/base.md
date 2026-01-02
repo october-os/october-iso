@@ -23,7 +23,6 @@ This file contains a list of all the base packages that will be present in all i
 - pacman-contrib
 - sudo
 - wget
-- yay
 - openssh
 
 ## Bluetooth
@@ -40,7 +39,6 @@ This file contains a list of all the base packages that will be present in all i
 
 ## Apps
 
-- zen-browser-bin
 - kitty
 - feh
 - blueman
