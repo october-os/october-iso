@@ -1,5 +1,6 @@
-NAME="october-linux"
+NAME="October Linux"
 PRETTY_NAME="October Linux"
-ID=october-linux
+ID=october
 BUILD_ID=rolling
-ANSI_COLOR="38;2;23;147;209"
+ANSI_COLOR="38;2;255;192;203"
+LOGO=octoberlinux-logo
