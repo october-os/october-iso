@@ -45,5 +45,5 @@ if [[ "$1" -eq "release" ]] ; then
     name=october-linux
     currentDate=$(date +'%Y.%m.%d')
 
-    mv latest-release/$isoName latest-release/"${name}.${currentDate}"
+    mv latest-release/$isoName latest-release/"${name}.${currentDate}.iso"
 fi
