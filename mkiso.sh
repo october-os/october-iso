@@ -25,9 +25,10 @@ if [[ "$1" -eq "release" ]] ; then
     mkdir -p $binPath
     mkdir -p temp
 
-    git clone https://github.com/october-os/october-installer.git temp
+    mkdir temp
     cd temp
-    go build -o october-installer cmd/main.go
+    curl https://api.github.com/repos/october-os/october-installer/releases/latest | grep "browser_download_url\": \"" \
+    | sed 's/"browser_download_url": //g' | xargs wget
     cd ..
 
     mv temp/october-installer $binPath
@@ -39,4 +40,10 @@ if [[ "$1" -eq "release" ]] ; then
     sudo mkarchiso -v -r -w /tmp/archiso-temp -o latest-release/ archiso/installer-profile/
 
     rm -rf temp
+
+    isoName=$(ls latest-release)
+    name=october-linux
+    currentDate=$(date +'%Y.%m.%d')
+
+    mv latest-release/$isoName latest-release/"${name}.${currentDate}"
 fi
