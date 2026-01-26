@@ -9,7 +9,9 @@ cp docs/packages/base.md $postinstallpath/packages
 cp docs/packages/aur.md $postinstallpath/aur
 
 if [[ $# -eq 0 ]] ; then
-    sed -i '/mount -t virtiofs installer \/root\/installer/s/^#//g' $zloginPath
+    if [[ $(cat $zloginPath | grep mount) == *"#"* ]]; then
+        sed -i '/mount -t virtiofs installer \/root\/installer/s/^#//g' $zloginPath
+    fi
 
     mkdir -p build
     sudo mkarchiso -v -r -w /tmp/archiso-temp -o build/ archiso/installer-profile/
@@ -30,7 +32,9 @@ if [[ "$1" -eq "release" ]] ; then
 
     mv temp/october-installer $binPath
 
-    sed -i '/mount -t virtiofs installer \/root\/installer/s/^/#/g' $zloginPath
+    if [[ $(cat $zloginPath | grep mount) != *"#"* ]]; then
+        sed -i '/mount -t virtiofs installer \/root\/installer/s/^/#/g' $zloginPath
+    fi
 
     sudo mkarchiso -v -r -w /tmp/archiso-temp -o latest-release/ archiso/installer-profile/
 
