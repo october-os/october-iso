@@ -4,4 +4,9 @@ if grep -Fqa 'accessibility=' /proc/cmdline &> /dev/null; then
 fi
 
 ~/.automated_script.sh
+
+if [ -f /usr/bin/october-installer ]; then
+    chmod +x /usr/bin/october-installer
+fi
+
 mount -t virtiofs installer /root/installer
