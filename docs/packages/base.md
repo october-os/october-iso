@@ -57,6 +57,7 @@ This file contains a list of all the base packages that will be present in all i
 - quickshell
 - xdg-desktop-portal-hyprland
 - sddm SYSTEMD_ENABLE
+- nwg-displays
 
 ## Fonts
 
