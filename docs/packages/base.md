@@ -56,7 +56,8 @@ This file contains a list of all the base packages that will be present in all i
 - swww
 - quickshell
 - xdg-desktop-portal-hyprland
-- sddm SYSTEMD_ENABLE
+- greetd SYSTEMD_ENABLE
+- greetd-tuigreet
 - swayosd
 - nwg-displays
 - upower
