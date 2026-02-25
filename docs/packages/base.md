@@ -60,6 +60,9 @@ This file contains a list of all the base packages that will be present in all i
 - swayosd
 - nwg-displays
 - upower
+- python-pywal
+// backend for pywal
+- python-colorthief
 
 ## Fonts
 
