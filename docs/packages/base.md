@@ -64,6 +64,9 @@ This file contains a list of all the base packages that will be present in all i
 - python-pywal
 // backend for pywal
 - python-colorthief
+// needed for quickshell
+- qt6-5compat
+- wofi
 
 ## Fonts
 
