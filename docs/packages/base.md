@@ -24,6 +24,7 @@ This file contains a list of all the base packages that will be present in all i
 - sudo
 - wget
 - openssh
+- lsb-release
 
 ## Bluetooth
 
