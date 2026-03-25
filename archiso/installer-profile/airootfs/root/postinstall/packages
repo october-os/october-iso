@@ -53,7 +53,7 @@ This file contains a list of all the base packages that will be present in all i
 - hyprland
 - hyprlock
 - hyprshot
-- swww
+- awww
 - quickshell
 - xdg-desktop-portal-hyprland
 - greetd SYSTEMD_ENABLE
