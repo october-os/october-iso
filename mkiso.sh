@@ -3,6 +3,7 @@
 postinstallpath=archiso/installer-profile/airootfs/root/postinstall
 zloginPath=archiso/installer-profile/airootfs/root/.zlogin
 binPath=archiso/installer-profile/airootfs/usr/bin
+installerShareFolder=archiso/installer-profile/airootfs/root/installer
 
 mkdir -p $postinstallpath
 cp docs/packages/base.md $postinstallpath/packages
@@ -14,6 +15,7 @@ if [[ $# -eq 0 ]] ; then
     fi
 
     mkdir -p build
+    mkdir -p $installerShareFolder
     sudo mkarchiso -v -r -w /tmp/archiso-temp -o build/ archiso/installer-profile/
 
     exit 0
@@ -36,6 +38,7 @@ if [[ "$1" -eq "release" ]] ; then
     if [[ $(cat $zloginPath | grep mount) != *"#"* ]]; then
         sed -i '/mount -t virtiofs installer \/root\/installer/s/^/#/g' $zloginPath
     fi
+    rm -rf $installerShareFolder
 
     sudo mkarchiso -v -r -w /tmp/archiso-temp -o latest-release/ archiso/installer-profile/
 

@@ -3,3 +3,4 @@
 ## Apps
 
 - zen-browser-bin
+- octoberctl-bin
