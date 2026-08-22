@@ -1,3 +1,4 @@
 build/
 archiso/installer-profile/airootfs/usr/bin/october-installer
+archiso/installer-profile/airootfs/root/installer
 latest-release/
