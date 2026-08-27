@@ -2,7 +2,7 @@ name: Update October ISO version on the website
 
 on:
   release:
-    type: [published]
+    types: [published]
 
 jobs:
   dispatch:
