@@ -1,0 +1,16 @@
+name: Update October ISO version on the website
+
+on:
+  release:
+    type: [published]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Dispatch website ISO update
+        uses: peter-evans/repository-dispatch@v4
+        with:
+          event-type: iso-updated
