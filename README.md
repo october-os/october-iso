@@ -2,7 +2,8 @@
 
 October ISO is the official repository for generating installation ISO files for October Linux.
 
-It works with `archiso` so the generation can only be done on an Arch Linux or Arch based OS.
+It works with `archiso` (via `mkarchiso`) so generation is intended to be done on Arch Linux or Arch-based 
+system with `sudo` and network access.
 
 ## Quickstart
 
@@ -13,26 +14,31 @@ cd october-iso
 ./mkiso.sh release
 ```
 
-This will generate a new ISO file in the `latest-release` directory.
+This will fetch the latest installer relase and generate a new ISO file in the `latest-release` directory.
 
 ## Generating a new ISO
 
-To generate a new ISO, the script `mkiso.sh` needs to be ran.
+To generate a new ISO, run the script `mkiso.sh`.
 
-If it is ran without arguments, it will create a `build` directory with a development ISO inside.
-
-With the argument `release`, it will generate a new ISO in the `latest-release` directory.
+- Without arguments, it will create a `build` directory with a development ISO inside. This activates
+the virtiofs mount for development and adds the `installer` directory for that mount.
+- With the argument `release`, it will generate a new ISO in the `latest-release` directory. This also
+remove all the development specific things from the ISO.
 
 ## Repository structure
 
 ### `archiso`
 
-The `archiso` directory is where the ISO profile resides. All the files in `archiso/installer-profile` will
-be added to the ISO during the build. `archiso/installer-profile/airootfs` is considered the root of the ISO.
+The `archiso` directory is where the ISO profile resides. 
+
+Files in `archiso/installer-profile` are necessary for the configuration of the ISO. 
+
+`archiso/installer-profile/airootfs` is considered the root of the ISO.
 
 ### `docs/packages`
 
-`docs/packages` is the directory with the official packages list that are added on top of the core Arch
-installation. 
+`docs/packages` is the directory with the official package lists that are used by the installer on top
+of the base Arch packages.
+
 - `base.md` are packages in the official package repositories
 - `aur.md` are AUR packages.
