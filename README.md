@@ -21,7 +21,7 @@ This will fetch the latest installer release and generate a new ISO file in the 
 To generate a new ISO, run the script `mkiso.sh`.
 
 - Without arguments, it will create a `build` directory with a development ISO inside. This activates
-the virtiofs mount for development and adds the `installer` directory for that mount.
+the virtiofs mount for development and adds the `installer` directory for it.
 - With the argument `release`, it fetches the latest installer release and it generates a new ISO in the 
 `latest-release` directory with the installer bundled inside. 
 This also removes all the development specific things from the ISO.
