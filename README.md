@@ -1,9 +1,9 @@
-# October Linux ISO
+# October ISO
 
 October ISO is the official repository for generating installation ISO files for October Linux.
 
 It works with `archiso` (via `mkarchiso`) so generation is intended to be done on Arch Linux or Arch-based 
-system with `sudo` and network access.
+systems. The script requires `sudo` and network access.
 
 ## Quickstart
 
@@ -14,7 +14,7 @@ cd october-iso
 ./mkiso.sh release
 ```
 
-This will fetch the latest installer relase and generate a new ISO file in the `latest-release` directory.
+This will fetch the latest installer release and generate a new ISO file in the `latest-release` directory.
 
 ## Generating a new ISO
 
@@ -22,8 +22,9 @@ To generate a new ISO, run the script `mkiso.sh`.
 
 - Without arguments, it will create a `build` directory with a development ISO inside. This activates
 the virtiofs mount for development and adds the `installer` directory for that mount.
-- With the argument `release`, it will generate a new ISO in the `latest-release` directory. This also
-remove all the development specific things from the ISO.
+- With the argument `release`, it fetches the latest installer release and it generates a new ISO in the 
+`latest-release` directory with the installer bundled inside. 
+This also removes all the development specific things from the ISO.
 
 ## Repository structure
 
@@ -31,9 +32,8 @@ remove all the development specific things from the ISO.
 
 The `archiso` directory is where the ISO profile resides. 
 
-Files in `archiso/installer-profile` are necessary for the configuration of the ISO. 
-
-`archiso/installer-profile/airootfs` is considered the root of the ISO.
+Files in `archiso/installer-profile` are necessary for the configuration of the ISO as well as `airootfs` that 
+is considered the root of the ISO.
 
 ### `docs/packages`
 
