@@ -16,7 +16,7 @@ This file contains a list of all the base packages that will be present in all i
 - man-pages
 - nano
 - vi
-- networkmanager SYSTEMD_ENABLE=NetworkManager
+- networkmanager
 - os-prober
 // needed for os-prober to work properly, but not in dependencies (what??)
 - fuse3
@@ -29,12 +29,12 @@ This file contains a list of all the base packages that will be present in all i
 
 ## Bluetooth
 
-- bluez SYSTEMD_ENABLE=bluetooth
+- bluez
 - bluez-utils
 
 ## Sound
 
-- pipewire SYSTEMD_USER_ENABLE
+- pipewire
 - pipewire-pulse
 - alsa-utils
 - wireplumber
@@ -58,7 +58,7 @@ This file contains a list of all the base packages that will be present in all i
 - awww
 - quickshell
 - xdg-desktop-portal-hyprland
-- greetd SYSTEMD_ENABLE
+- greetd
 - greetd-tuigreet
 - swayosd
 - nwg-displays

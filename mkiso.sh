@@ -8,6 +8,7 @@ installerShareFolder=archiso/installer-profile/airootfs/root/installer
 mkdir -p $postinstallpath
 cp docs/packages/base.md $postinstallpath/packages
 cp docs/packages/aur.md $postinstallpath/aur
+cp docs/packages/services.md $postinstallpath/services
 
 if [[ $# -eq 0 ]] ; then
     if [[ $(cat $zloginPath | grep mount) == *"#"* ]]; then
