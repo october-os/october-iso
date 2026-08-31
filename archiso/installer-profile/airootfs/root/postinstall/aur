@@ -4,3 +4,4 @@
 
 - zen-browser-bin
 - octoberctl-bin
+- python-pywal16
